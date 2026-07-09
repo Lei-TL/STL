@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Libs/">
+    <Project Path="Libs/Redis/STL.Redis.csproj" />
+  </Folder>
+  <Project Path="Domain/STL.Core.csproj" />
+  <Project Path="Infrastructure/STL.Infrastructure.csproj" />
+  <Project Path="STL/STL.WebApis.csproj" />
+</Solution>

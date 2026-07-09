@@ -1,0 +1,17 @@
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\STL.Core.csproj.AssemblyReference.cache
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\STL.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\STL.Core.AssemblyInfoInputs.cache
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\STL.Core.AssemblyInfo.cs
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\STL.Core.csproj.CoreCompileInputs.cache
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\bin\Debug\net10.0\STL.Core.deps.json
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\bin\Debug\net10.0\STL.Core.runtimeconfig.json
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\bin\Debug\net10.0\STL.Core.dll
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\bin\Debug\net10.0\STL.Core.pdb
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\bin\Debug\net10.0\STL.Infrastructure.dll
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\bin\Debug\net10.0\STL.Infrastructure.pdb
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\STL.Core.csproj.Up2Date
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\STL.Core.dll
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\refint\STL.Core.dll
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\STL.Core.pdb
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\STL.Core.genruntimeconfig.cache
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Domain\obj\Debug\net10.0\ref\STL.Core.dll

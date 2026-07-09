@@ -1,0 +1,12 @@
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\bin\Debug\net10.0\STL.Infrastructure.deps.json
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\bin\Debug\net10.0\STL.Infrastructure.dll
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\bin\Debug\net10.0\STL.Infrastructure.pdb
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\obj\Debug\net10.0\STL.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\obj\Debug\net10.0\STL.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\obj\Debug\net10.0\STL.Infrastructure.AssemblyInfo.cs
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\obj\Debug\net10.0\STL.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\obj\Debug\net10.0\STL.Infrastructure.dll
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\obj\Debug\net10.0\refint\STL.Infrastructure.dll
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\obj\Debug\net10.0\STL.Infrastructure.pdb
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\obj\Debug\net10.0\ref\STL.Infrastructure.dll
+C:\Users\pc\OneDrive\Desktop\W\Intern\STL\Infrastructure\obj\Debug\net10.0\STL.Infrastructure.csproj.AssemblyReference.cache

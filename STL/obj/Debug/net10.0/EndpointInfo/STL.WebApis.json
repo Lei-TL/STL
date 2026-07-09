@@ -1,0 +1,1141 @@
+{
+  "x-generator": "NSwag v14.6.3.0 (NJsonSchema v11.5.2.0 (Newtonsoft.Json v13.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "STL.WebApis",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/products": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsProductEndpointsCreateProductEndpoint",
+        "requestBody": {
+          "x-name": "CreateProductRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/STLEndpointsProductEndpointsCreateProductRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLEndpointsProductEndpointsCreateProductResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastEndpointsErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsProductEndpointsGetListProductEndpoint",
+        "parameters": [
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLModelsPagedListOfGetListProductResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/products/{id}": {
+      "delete": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsProductEndpointsDeleteProductEndpoint",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLEndpointsProductEndpointsDeleteProductResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsProductEndpointsUpdateProductEndpoint",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "x-name": "UpdateProductRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/STLEndpointsProductEndpointsUpdateProductRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLEndpointsProductEndpointsUpdateProductResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastEndpointsErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/products/export": {
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsProductEndpointsExportProductsEndpoint",
+        "parameters": [
+          {
+            "name": "Format",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/STLSharedServicesFileFileFormat"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/product/{id}": {
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsProductEndpointsGetProductEndpoint",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLEndpointsProductEndpointsGetProductResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastEndpointsErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/products/import": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsProductEndpointsImportProductsEndpoint",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLEndpointsProductEndpointsImportProductsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/category": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsCategoryEndpointsCreateCategoryEndpoint",
+        "requestBody": {
+          "x-name": "CreateCategoryRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/STLEndpointsCategoryEndpointsCreateCategoryRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLEndpointsCategoryEndpointsCreateCategoryResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastEndpointsErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/category/{id}": {
+      "delete": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsCategoryEndpointsDeleteCategoryEndpoint",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsCategoryEndpointsGetCategoryEndpoint",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLEndpointsCategoryEndpointsGetCategoryResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastEndpointsErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsCategoryEndpointsUpdateCategoryEndpoint",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "x-name": "UpdateCategoryRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/STLEndpointsCategoryEndpointsUpdateCategoryRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLEndpointsCategoryEndpointsUpdateCategoryResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastEndpointsErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/categories": {
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLEndpointsCategoryEndpointsGetListCategoryEndpoint",
+        "parameters": [
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLModelsPagedListOfGetListCategoryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLDomainEndpointsAuthEndpointsLoginEnpoint",
+        "requestBody": {
+          "x-name": "LoginRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/STLDomainEndpointsAuthEndpointsLoginRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLDomainEndpointsAuthEndpointsLoginResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastEndpointsErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLDomainEndpointsAuthEndpointsLogoutEndpoint",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLDomainEndpointsAuthEndpointsLogoutResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWTBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/auth/refresh": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLDomainEndpointsAuthEndpointsRefreshEndpoint",
+        "requestBody": {
+          "x-name": "RefreshRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/STLDomainEndpointsAuthEndpointsRefreshRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLDomainEndpointsAuthEndpointsRefreshResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastEndpointsErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/register": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "operationId": "STLDomainEndpointsAuthEndpointsRegisterEndpoint",
+        "requestBody": {
+          "x-name": "RegisterRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/STLDomainEndpointsAuthEndpointsRegisterRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/STLDomainEndpointsAuthEndpointsRegisterResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastEndpointsErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "STLEndpointsProductEndpointsCreateProductResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string"
+          }
+        }
+      },
+      "STLEndpointsProductEndpointsCreateProductRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "CategoryId": {
+            "type": "string"
+          }
+        }
+      },
+      "FastEndpointsErrorResponse": {
+        "type": "object",
+        "description": "the dto used to send an error response to the client",
+        "additionalProperties": false,
+        "properties": {
+          "StatusCode": {
+            "type": "integer",
+            "description": "the http status code sent to the client. default is 400.",
+            "format": "int32",
+            "default": 400
+          },
+          "Message": {
+            "type": "string",
+            "description": "the message for the error response",
+            "default": "One or more errors occurred!"
+          },
+          "Errors": {
+            "type": "object",
+            "description": "the collection of errors for the current context",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "STLEndpointsProductEndpointsDeleteProductResponse": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "STLEndpointsProductEndpointsExportProductsRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "STLSharedServicesFileFileFormat": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Excel",
+          "Csv"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "STLModelsPagedListOfGetListProductResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/STLEndpointsProductEndpointsGetListProductResponse"
+            }
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "STLEndpointsProductEndpointsGetListProductResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "CategoryId": {
+            "type": "string"
+          },
+          "CategoryName": {
+            "type": "string"
+          }
+        }
+      },
+      "STLEndpointsProductEndpointsGetListProductRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/STLModelsPagingRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "STLModelsPagingRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "STLEndpointsProductEndpointsGetProductResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "CategoryId": {
+            "type": "string"
+          }
+        }
+      },
+      "STLEndpointsProductEndpointsGetProductRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "STLEndpointsProductEndpointsImportProductsResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ImportedCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "FastEndpointsEmptyRequest": {
+        "type": "object",
+        "description": "a request dto that doesn't have any properties",
+        "additionalProperties": false
+      },
+      "STLEndpointsProductEndpointsUpdateProductResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "CategoryId": {
+            "type": "string"
+          }
+        }
+      },
+      "STLEndpointsProductEndpointsUpdateProductRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "CategoryId": {
+            "type": "string"
+          }
+        }
+      },
+      "STLEndpointsCategoryEndpointsCreateCategoryResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string"
+          }
+        }
+      },
+      "STLEndpointsCategoryEndpointsCreateCategoryRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Name": {
+            "type": "string"
+          }
+        }
+      },
+      "STLEndpointsCategoryEndpointsGetCategoryResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Name": {
+            "type": "string"
+          }
+        }
+      },
+      "STLEndpointsCategoryEndpointsGetCategoryRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "STLModelsPagedListOfGetListCategoryResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/STLEndpointsCategoryEndpointsGetListCategoryResponse"
+            }
+          },
+          "TotalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TotalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "STLEndpointsCategoryEndpointsGetListCategoryResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CategoryId": {
+            "type": "string"
+          },
+          "CategoryName": {
+            "type": "string"
+          }
+        }
+      },
+      "STLEndpointsCategoryEndpointsGetListCategoryRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/STLModelsPagingRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "STLEndpointsCategoryEndpointsUpdateCategoryResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          }
+        }
+      },
+      "STLEndpointsCategoryEndpointsUpdateCategoryRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Name": {
+            "type": "string"
+          }
+        }
+      },
+      "STLDomainEndpointsAuthEndpointsLoginResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "AccessToken": {
+            "type": "string"
+          },
+          "AccessTokenExpireAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "RefreshToken": {
+            "type": "string"
+          },
+          "RefreshTokenExpireAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "STLDomainEndpointsAuthEndpointsLoginRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Email": {
+            "type": "string"
+          },
+          "Password": {
+            "type": "string"
+          }
+        }
+      },
+      "STLDomainEndpointsAuthEndpointsLogoutResponse": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "STLDomainEndpointsAuthEndpointsRefreshResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "AccessToken": {
+            "type": "string"
+          },
+          "AccessTokenExpireAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "RefreshToken": {
+            "type": "string"
+          },
+          "RefreshTokenExpireAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "STLDomainEndpointsAuthEndpointsRefreshRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "AccessToken": {
+            "type": "string"
+          },
+          "RefreshToken": {
+            "type": "string"
+          }
+        }
+      },
+      "STLDomainEndpointsAuthEndpointsRegisterResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string"
+          }
+        }
+      },
+      "STLDomainEndpointsAuthEndpointsRegisterRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Email": {
+            "type": "string"
+          },
+          "Password": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "JWTBearerAuth": {
+        "type": "http",
+        "description": "Enter a JWT token to authorize the requests...",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
